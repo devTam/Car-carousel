@@ -44,7 +44,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    // animation: logoEntry 1.5s cubic-bezier(1,-0.03,.22,1.68);
+    animation: logoEntry 1.5s cubic-bezier(1,-0.03,.22,1.68);
 
     &__svg {
         fill: green;
