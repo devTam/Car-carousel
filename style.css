@@ -11,21 +11,115 @@ body {
   background-image: url(/images/show1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.show {
-  height: 100%;
-  width: 100%;
   position: relative;
 }
 
-img {
-  width: 300px;
-  height: 130px;
+.logo {
+  width: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo__svg {
+  fill: green;
+}
+
+.carousel {
+  position: relative;
+  width: 70%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.carousel__btn {
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  outline: none;
+  cursor: pointer;
+}
+
+.carousel__btn svg {
+  height: 25px;
+  fill: #fff;
+}
+
+.carousel__btn svg:hover {
+  fill: #f4791f;
+}
+
+.carousel__btn--left {
+  left: -40px;
+}
+
+.carousel__btn--right {
+  right: -40px;
+}
+
+.carousel__list {
+  list-style: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__list--item {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.carousel__img {
+  width: 500px;
+  opacity: 0;
+}
+
+.carousel__img--current {
+  opacity: 1;
+}
+
+.carousel__nav {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.carousel__nav-btn {
+  border: none;
+  padding: 5px;
+  border-radius: 50%;
+  margin: 0 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+.carousel__nav-btn:hover {
+  background-color: #f4791f;
+}
+
+.carousel__nav-btn--current {
+  background-color: green;
 }
 /*# sourceMappingURL=style.css.map */
