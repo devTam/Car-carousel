@@ -12,6 +12,61 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow: hidden;
+}
+
+@-webkit-keyframes logoEntry {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes logoEntry {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes right {
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes right {
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@-webkit-keyframes left {
+  100% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+}
+
+@keyframes left {
+  100% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
 }
 
 .logo {
@@ -32,6 +87,14 @@ body {
   fill: green;
 }
 
+.logo__svg-text {
+  -webkit-transform: translate(1px, 74px);
+          transform: translate(1px, 74px);
+  fill: none;
+  font-size: 71px;
+  font-family: VerminVibesV, Vermin Vibes V;
+}
+
 .carousel {
   position: relative;
   width: 70%;
@@ -48,14 +111,12 @@ body {
   width: 20px;
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   outline: none;
   cursor: pointer;
 }
 
 .carousel__btn svg {
-  height: 25px;
+  height: 30px;
   fill: #fff;
 }
 
@@ -64,11 +125,15 @@ body {
 }
 
 .carousel__btn--left {
-  left: -40px;
+  left: -35px;
+  -webkit-animation: left 1s infinite alternate linear;
+          animation: left 1s infinite alternate linear;
 }
 
 .carousel__btn--right {
-  right: -40px;
+  right: -35px;
+  -webkit-animation: right 1s infinite alternate linear;
+          animation: right 1s infinite alternate linear;
 }
 
 .carousel__list {
@@ -88,11 +153,6 @@ body {
 
 .carousel__img {
   width: 500px;
-  opacity: 0;
-}
-
-.carousel__img--current {
-  opacity: 1;
 }
 
 .carousel__nav {

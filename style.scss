@@ -11,7 +11,32 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    overflow: hidden;
 }
+
+@keyframes logoEntry {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes right{
+    100% {
+        transform: translateX(10px);
+    }
+}
+
+@keyframes left{
+    100% {
+        transform: translateX(-10px);
+    }
+}
+
 
 .logo {
     width: 100%;
@@ -19,9 +44,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    // animation: logoEntry 1.5s cubic-bezier(1,-0.03,.22,1.68);
 
     &__svg {
         fill: green;
+
+        &-text {
+            transform: translate(1px, 74px);
+            fill: none;
+            font-size: 71px; 
+            font-family:VerminVibesV, Vermin Vibes V;
+        }
     }
 }
 
@@ -39,12 +72,11 @@ body {
         width: 20px;
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
         outline: none;
         cursor: pointer;
 
         & svg {
-            height: 25px;
+            height: 30px;
             fill: #fff;
 
             &:hover {
@@ -53,11 +85,14 @@ body {
         }
 
         &--left {
-            left: -40px;
+            left: -35px;
+            animation: left 1s infinite alternate linear;
         }
 
         &--right {
-            right: -40px;
+            right: -35px;
+            animation: right 1s infinite alternate linear;
+
         }
     }
 
@@ -78,12 +113,6 @@ body {
 
     &__img {
         width: 500px;
-        opacity: 0;
-
-        &--current {
-            opacity: 1;
-        }
-        
     }
 
     &__nav {
