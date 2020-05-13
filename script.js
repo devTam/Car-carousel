@@ -6,6 +6,8 @@ const prevBtn = document.querySelector('.carousel__btn--left');
 const navContainer = document.querySelector('.carousel__nav');
 const navArray = Array.from(navContainer.children);
 
+
+// === ARRANGING SLIDES NEXT TO EACH OTHER BY SETTING LEFT PROP
 const slideWidth = slidesArray[0].getBoundingClientRect().width;
 
 // arrange slides next to each other
