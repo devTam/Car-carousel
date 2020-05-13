@@ -81,6 +81,18 @@ body {
   }
 }
 
+@-webkit-keyframes bgcolor {
+  100% {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
+@keyframes bgcolor {
+  100% {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
+
 .hide {
   display: none;
 }
@@ -100,6 +112,12 @@ body {
           align-items: center;
   -webkit-animation: logoEntry 1.5s cubic-bezier(1, -0.03, 0.22, 1.68);
           animation: logoEntry 1.5s cubic-bezier(1, -0.03, 0.22, 1.68);
+}
+
+.logo__svg {
+  -webkit-animation: bgcolor 2s 2s forwards;
+          animation: bgcolor 2s 2s forwards;
+  border-radius: 10px;
 }
 
 .logo__svg-text {
@@ -136,7 +154,7 @@ body {
 }
 
 .carousel__btn svg:hover {
-  fill: #f4791f;
+  fill: green;
 }
 
 .carousel__btn--left {
